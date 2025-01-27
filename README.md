@@ -1,27 +1,12 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
-
-<div align="center">
-<a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
-</a>
-<p></p>
-</div>
-
-<div align="center">
-
-![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
-![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/porfolio.dev)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/porfolio.dev)
-![GitHub forks](https://img.shields.io/github/forks/midudev/porfolio.dev)
-![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
+👨🏻‍💻 Portafolio de Alejandro Colodrero García
+<div align="center"> <a href="https://github.com/colodreroalex"> <img src="https://avatars.githubusercontent.com/colodreroalex" alt="Foto de perfil de Alejandro Colodrero García" width="150"> </a> <p></p> </div> <div align="center">
 
 </div>
+🛠️ Tecnologías y Herramientas
 
-## 🫂 Contribuidores
+📈 Estadísticas de GitHub
+<div align="center"> <img src="https://github-readme-stats.vercel.app/api?username=colodreroalex&show_icons=true&theme=radical" alt="Estadísticas de GitHub de Alejandro Colodrero García"> </div>
 
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
-
-<p></p>
+📫 Contacto
+LinkedIn: Alejandro Colodrero García
+GitHub: colodreroalex
