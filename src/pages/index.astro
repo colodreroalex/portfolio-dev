@@ -10,41 +10,78 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import Skills from "@/components/Skills.astro"
+import SkillsIcon from "@/components/icons/Skills.astro"
+import { getTranslations } from "@/i18n/i18n"
+
+// Obtener el idioma de la URL
+const urlLang = Astro.url.searchParams.get('lang');
+
+// Establecer o actualizar la cookie si hay un parámetro de idioma válido
+if (urlLang === 'en' || urlLang === 'es') {
+  Astro.cookies.set('preferred-lang', urlLang, {
+    path: '/',
+    maxAge: 60 * 60 * 24 * 365 // 1 año
+  });
+}
+
+// Obtener el idioma de las cookies si no hay parámetro en la URL
+const cookieLang = Astro.cookies.get('preferred-lang')?.value;
+
+// Determinar el idioma final
+const lang = (urlLang === 'en' || urlLang === 'es') 
+  ? urlLang as 'es' | 'en' 
+  : (cookieLang === 'en' || cookieLang === 'es')
+    ? cookieLang as 'es' | 'en'
+    : 'es';
+
+// Obtener las traducciones para el idioma seleccionado
+const t = getTranslations(lang);
+
+// Registrar para depuración
+console.log(`Idioma seleccionado: ${lang} (URL: ${urlLang}, Cookie: ${cookieLang})`);
 ---
 
 <Layout
-  title="Porfolio de Alejandro Colodrero - Desarrollador y Programador Web"
-  description="Contrata a Alejandro para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title={lang === 'es' ? "Porfolio de Alejandro Colodrero - Desarrollador y Programador Web" : "Alejandro Colodrero's Portfolio - Web Developer and Programmer"}
+  description={lang === 'es' ? "Contrata a Alejandro para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas." : "Hire Alejandro to create your web or mobile application. Web Developer and Content Creator. Specialized in creating unique applications."}
+  lang={lang}
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+  <main >
+    <SectionContainer class="hero-section">
+      <Hero lang={lang} />
     </SectionContainer>
-    <div class="space-y-24">
+    <div class="section-stack">
     <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
-        Experiencia laboral
+        {t.sections.experience}
       </TitleSection>
-      <Experience />
+      <Experience lang={lang} />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Proyectos
+        {t.sections.projects}
       </TitleSection>
-      <Projects />
+      <Projects lang={lang} />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <TitleSection>
+        <SkillsIcon class="size-7" />
+        {t.sections.skills}
+      </TitleSection>
+      <Skills lang={lang} />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
       <TitleSection>
         <ProfileCheck class="size-8" />
-        Sobre mí
+        {t.sections.aboutMe}
       </TitleSection>
-      <AboutMe />
+      <AboutMe lang={lang} />
     </SectionContainer>
   </div>
   </main>

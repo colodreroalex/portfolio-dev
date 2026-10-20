@@ -1,0 +1,221 @@
+{
+  "header": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "aboutMe": "About Me",
+    "contact": "Contact"
+  },
+  "languageSelector": {
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "footer": {
+    "rights": "Almost all rights reserved",
+    "aboutMe": "About Me",
+    "contact": "Contact",
+    "downloadCV": "Download my CV"
+  },
+  "projects": [
+    {
+      "title": "Repsol",
+      "description": "<strong>Salesforce administration and support for Repsol’s Electricity and Gas teams</strong>, through Accenture. Access and platform component management, incident handling with <strong>ServiceNow</strong> and release validation with <strong>Azure DevOps</strong> across Production, QA and Pre-Production.",
+      "link": "https://www.linkedin.com/in/alejandro-colodrero-garc%C3%ADa/",
+      "linkText": "Experience on LinkedIn",
+      "image": "",
+      "current": true,
+      "period": "January 2026 — Present"
+    },
+    {
+      "title": "AC Digital",
+      "description": "<strong>Independent digital development studio</strong> with a public portfolio and a <strong>custom private CMS</strong>. Built with <strong>Astro SSR, TypeScript and Tailwind</strong>, using <strong>Firebase Auth and Firestore</strong> as the backend, an admin area secured with <strong>MFA (TOTP)</strong>, a contact CRM and deployment on <strong>Netlify</strong>.",
+      "link": "https://ac-digital-studio.netlify.app",
+      "linkText": "AC Digital",
+      "image": "/projects/ac-digital.png",
+      "current": false,
+      "period": ""
+    },
+    {
+      "title": "Cyber Kiosks",
+      "description": "As a Junior Software Developer at Sepalo Software, I participated in the <strong>implementation of cyber kiosks in various locations across Spain</strong>, bringing administration closer to citizens. These kiosks allow users to complete municipal procedures without going to the city center, offering services such as <strong>issuing residence certificates</strong> and payment of <strong>taxes and fees...</strong>",
+      "link": "https://sepalo.es/category/quioscos-y-cajreos/",
+      "linkText": "Sepalo Software",
+      "image": "/projects/cajeros.png",
+      "current": false,
+      "period": ""
+    },
+    {
+      "title": "Online Store",
+      "description": "<strong>Mundo Nómada</strong> is a web application developed with <strong>Angular</strong> that allows users to <strong>explore and manage</strong> a fashion and accessories store. The application provides an intuitive and modern user experience, following best <strong>UI/UX and accessibility practices.</strong>",
+      "link": "https://github.com/colodreroalex/mundo-nomada",
+      "linkText": "Mundo Nómada",
+      "image": "/projects/portada-mundo-nomada.png",
+      "current": false,
+      "period": ""
+    }
+  ],
+  "aboutMe": {
+    "paragraph1": "I am Alejandro Colodrero, a web and cross-platform developer from Baena, Córdoba. At Accenture, I work as a Business Architecture Associate, carrying out Salesforce administration and application support for Repsol.",
+    "paragraph2": "My work connects platform configuration and security with day-to-day operations: Production, QA and Pre-Production support, incident management in ServiceNow and release validation with Azure DevOps. I support Electricity and Gas teams during release windows and synchronization processes.",
+    "paragraph3": "Previously, I worked in SAP ABAP development and payment kiosk software. I have completed DAM and DAW vocational qualifications and am developing my Salesforce expertise while preparing for the Salesforce Administrator certification. My B2 English supports working with technical documentation and in professional environments."
+  },
+  "experience": [
+    {
+      "date": "January 2026 – Present",
+      "title": "Salesforce Administrator & Application Support",
+      "company": "Accenture Spain · Repsol project",
+      "description": "<p class='experience-role'>Business Architecture Associate</p><ul class='experience-points'><li><strong>Users and security:</strong> administration of roles, profiles, Permission Sets, queues, public groups and delegated administration.</li><li><strong>Environment support:</strong> operations across Production, QA and Pre-Production, including controlled script execution and consistency checks.</li><li><strong>Incidents and changes:</strong> triage, tracking and resolution follow-up through ServiceNow.</li><li><strong>Releases and Azure DevOps:</strong> deployment verification, destructive changes handling, Pull Request reviews and branch consistency checks.</li><li><strong>Salesforce configuration:</strong> maintenance of Flows, Validation Rules, Objects, Record Types, Approval Processes and Email-to-Case.</li><li><strong>Business support:</strong> assistance to Electricity and Gas teams during release windows and synchronization processes; contributions to technical debt reduction.</li></ul>"
+    },
+    {
+      "date": "March 2025 – June 2025",
+      "title": "SAP ABAP Developer",
+      "company": "Accenture, Malaga",
+      "description": "<ul class='experience-points'><li>Developed ABAP reports and maintained Data Dictionary structures; built interfaces using BDC (Batch Data Communication).</li><li>Worked on ETL workflows, data transformation and validation, improving code performance and maintainability.</li><li>Used SAP Workbench and the transport management system for deployment to higher environments; supported real client environments.</li><li>Applied development standards and gained introductory experience in object-oriented ABAP.</li></ul>"
+    },
+    {
+      "date": "September 2024 – June 2025",
+      "title": "Web Application Development (DAW)",
+      "company": "IES Luis Carrillo de Sotomayor, Baena",
+      "description": "Completed a vocational qualification in Web Application Development at IES Luis Carrillo de Sotomayor, building on my previous cross-platform development studies."
+    },
+    {
+      "date": "March 2024 – June 2024",
+      "title": "Junior Developer",
+      "company": "Sepalo Software S.L",
+      "description": "<ul class='experience-points'><li>Developed features for self-service payment terminals used across communities in Spain.</li><li>Contributed to documentation, testing and maintenance throughout the development lifecycle, collaborating with a team to build reliable, user-focused software.</li></ul>"
+    },
+    {
+      "date": "September 2022 – June 2024",
+      "title": "Cross-Platform Application Development (DAM)",
+      "company": "IES Luis Carrillo de Sotomayor, Baena",
+      "description": "Completed a vocational qualification in Cross-Platform Application Development at IES Luis Carrillo de Sotomayor."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Salesforce · Administration & security",
+      "items": [
+        "Users, roles & profiles",
+        "Permission Sets",
+        "Queues & public groups",
+        "Delegated administration",
+        "Security configuration"
+      ]
+    },
+    {
+      "category": "Salesforce · Configuration & automation",
+      "items": [
+        "Flows",
+        "Validation Rules",
+        "Objects",
+        "Record Types",
+        "Approval Processes",
+        "Email-to-Case"
+      ]
+    },
+    {
+      "category": "Operations & releases",
+      "items": [
+        "ServiceNow",
+        "Incident & change management",
+        "Azure DevOps",
+        "Pull Request reviews",
+        "Deployment validation",
+        "Destructive changes",
+        "Production · QA · Pre-Production",
+        "Controlled script execution"
+      ]
+    },
+    {
+      "category": "SAP ABAP",
+      "items": [
+        "ABAP reports",
+        "Data Dictionary",
+        "BDC",
+        "ETL & data validation",
+        "SAP Workbench",
+        "Transport management",
+        "Performance optimization"
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "HTML5",
+        "CSS",
+        "ABAP",
+        "Kotlin",
+        "Java",
+        "C#",
+        "Bash Scripting"
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": [
+        "Angular",
+        "ASP.NET",
+        "ASP.NET MVC",
+        "MVC",
+        "MVVM",
+        ".NET Framework"
+      ]
+    },
+    {
+      "category": "Databases & Tools",
+      "items": [
+        "BBDD",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Sourcetree",
+        "JIRA",
+        "POSTMAN",
+        "JSON",
+        "JWT"
+      ]
+    },
+    {
+      "category": "Systems & Servers",
+      "items": [
+        "Windows Server",
+        "GNU/Linux",
+        "Web Servers"
+      ]
+    },
+    {
+      "category": "Personal Skills",
+      "items": [
+        "Proactive Monitoring",
+        "Teamwork",
+        "Passion for Learning",
+        "Communication",
+        "English B2"
+      ]
+    },
+    {
+      "category": "Cloud & artificial intelligence",
+      "items": [
+        "Amazon EC2",
+        "Amazon VPC",
+        "Agentic AI"
+      ]
+    }
+  ],
+  "hero": {
+    "badge": "Working at Accenture Spain",
+    "greeting": "Hi, I'm Alex!",
+    "description": "<strong>Salesforce administrator at Accenture supporting Repsol</strong>, focused on security, environment support and release validation. Web and cross-platform developer with experience in <strong>SAP ABAP</strong>.",
+    "contactMe": "Contact Me"
+  },
+  "sections": {
+    "experience": "Professional Career",
+    "projects": "Projects",
+    "aboutMe": "About Me",
+    "skills": "Skills"
+  }
+}

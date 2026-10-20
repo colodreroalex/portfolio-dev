@@ -1,29 +1,29 @@
 ---
-const currentYear = new Date().getFullYear()
+import { getTranslations } from "@/i18n/i18n";
+
+const { lang = 'es' } = Astro.props;
+const t = getTranslations(lang);
+const currentYear = new Date().getFullYear();
 ---
 
-<footer
-  class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
->
-  <div
-    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
-  >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-      <a href="https://www.linkedin.com/in/alejandro-colodrero-garc%C3%ADa/" class="hover:underline">Alejandro Colodrero</a>. Casi
-      todos los derechos reservados
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>
+      &copy; {currentYear} 
+      <a href="https://www.linkedin.com/in/alejandro-colodrero-garc%C3%ADa/" class="hover:underline">
+        Alejandro Colodrero
+      </a>. {t.footer.rights}
     </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
-    >
+    
+    <ul>
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      <a href={`${lang === "en" ? "/en/" : "/"}#sobre-mi`} class="hover:underline">{t.footer.aboutMe}</a>
       </li>
       <li>
-        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline"
-          >Contacto</a
-        >
-        <a href="images_acg/ACG_CV.pdf" download="" class="btn-btn2">Descarga mi CV</a>
+      <a id="contacto" href="mailto:damalexcolo@gmail.com" class="hover:underline">{t.footer.contact}</a>
+      </li>
+      <li>
+      <a href="/Alejandro_Colodrero_CV.pdf" download class="hover:underline">{t.footer.downloadCV}</a>
       </li>
     </ul>
   </div>

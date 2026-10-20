@@ -1,27 +1,16 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCE = [
-  {
-    date: "Actualmente...",
-    title: "Estudiante de Desarrollo de Aplicaciones Web (DAW)",
-    company: "IES Luis Carrillo de Sotomayor, Baena",
-    description:
-      "Actualmente cursando el segundo año de DAW  en Baena, Córdoba. Recientemente finalicé DAM , lo que me ha permitido adquirir conocimientos tanto en desarrollo front-end como back-end. Estoy enfocado en mejorar mis habilidades técnicas y aprender nuevas tecnologías para prepararme para mi próxima etapa profesional.",
-  },
-  {
-    date: "2022 - 2023",
-    title: "Desarrollador Junior",
-    company: "Sepalo Software S.L",
-    description:
-      "Desarrollé cajeros de pago para diferentes comunidades de España. Este proyecto me permitió aprender sobre la importancia de las buenas prácticas de programación, la documentación y el trabajo en equipo. Además, reforcé mis habilidades en desarrollo de software y gestión de proyectos.",
-  },
-];
+import ExperienceItem from "./ExperienceItem.astro";
+import { getTranslations } from "@/i18n/i18n";
+
+const { lang = 'es' } = Astro.props;
+const t = getTranslations(lang);
+const EXPERIENCE = t.experience;
 ---
 
-<ol class="relative mt-16">
+<ol class="timeline">
   {
     EXPERIENCE.map((experience) => (
-      <li class="">
+      <li class="experience-item">
         <ExperienceItem {...experience} />
       </li>
     ))

@@ -1,31 +1,30 @@
 ---
- const personalImageAlt = "Alejandro Colodrero"
+import { getTranslations } from "@/i18n/i18n";
+
+const { lang = 'es' } = Astro.props;
+const t = getTranslations(lang);
+const personalImageAlt = "Alejandro Colodrero";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+<article
+  class="about-content"
+>
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    class="about-copy"
   >
-  <p>
-    Me llamo Alejandro Colodrero, aunque mis amigos me llaman Alex. Hace relativamente poco que me adentré en el mundo de la 
-    programación, pero desde entonces me esfuerzo por mejorar día a día. <strong>Tengo mucho entusiasmo por esta nueva etapa profesional</strong>
-    , y estoy comprometido a seguir aprendiendo y creciendo en este campo tan dinámico y desafiante.
-  </p>
+    <p set:html={t.aboutMe.paragraph1}></p>
 
-    <p>
-      Algunos de mis éxitos incluyen <strong
-        >desarrollar cajeros de pago para diferentes comunidades de España</strong
-      >. Fue un proyecto que me permitió aprender mucho sobre la importancia de las buenas prácticas y la documentación.
-    </p>
+    <p set:html={t.aboutMe.paragraph2}></p>
 
-    <p>
-      <strong>Mi nivel de inglés no está determinado por un certificado académico, 
-       </strong>  pero tengo un dominio bastante bueno. Puedo leer y comprender información tanto en contenido escrito 
-      como multimedia. Además, me resulta fácil hablar este idioma, aproximadamente en un <strong>nivel B2. </strong> 
-    </p>
+    <p set:html={t.aboutMe.paragraph3}></p>
   </div>
 
-  <img width="200" height="200" src="/me.jpeg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
+  <img
+    width="200"
+    height="200"
+    src="/yoTraje.png"
+    alt={personalImageAlt}
+    class="about-photo"
+    style="object-position: 50% 15%"
+  />
 </article>
-

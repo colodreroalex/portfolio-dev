@@ -1,0 +1,23 @@
+---
+import { getTranslations } from "@/i18n/i18n";
+
+
+const { lang = 'es' } = Astro.props;
+const t = getTranslations(lang);
+const SKILLS = t.skills;
+---
+
+<div class="skills-grid">
+  {SKILLS.map((category) => (
+    <article class="skill-category">
+      <h3 >
+        {category.category}
+      </h3>
+      <div class="skill-tags">
+        {category.items.map((skill) => (
+          <span class="skill-tag">{skill}</span>
+        ))}
+      </div>
+    </article>
+  ))}
+</div>

@@ -1,0 +1,68 @@
+---
+import EnglishLayout from "@/layouts/EnglishLayout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+import Skills from "@/components/Skills.astro"
+import SkillsIcon from "@/components/icons/Skills.astro"
+import { getTranslations } from "@/i18n/i18n"
+
+// Forzar el idioma inglés
+const lang = 'en';
+
+// Obtener las traducciones en inglés
+const t = getTranslations(lang);
+
+console.log(`English page loaded with lang: ${lang}`)
+---
+
+<EnglishLayout
+  title="Alejandro Colodrero's Portfolio - Web Developer and Programmer"
+  description="Hire Alejandro to create your web or mobile application. Web Developer and Content Creator. Specialized in creating unique applications."
+>
+  <main >
+    <SectionContainer class="hero-section">
+      <Hero lang={lang} />
+    </SectionContainer>
+    <div class="section-stack">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        {t.sections.experience}
+      </TitleSection>
+      <Experience lang={lang} />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        {t.sections.projects}
+      </TitleSection>
+      <Projects lang={lang} />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <TitleSection>
+        <SkillsIcon class="size-7" />
+        {t.sections.skills}
+      </TitleSection>
+      <Skills lang={lang} />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        {t.sections.aboutMe}
+      </TitleSection>
+      <AboutMe lang={lang} />
+    </SectionContainer>
+  </div>
+  </main>
+</EnglishLayout>

@@ -1,0 +1,15 @@
+---
+// Obtener el parámetro de idioma de la URL
+const lang = Astro.url.searchParams.get('lang');
+
+// Establecer cookie solo si el idioma es válido (es o en)
+if (lang === 'es' || lang === 'en') {
+  Astro.cookies.set('preferred-lang', lang, {
+    path: '/',
+    maxAge: 60 * 60 * 24 * 365 // 1 año
+  });
+}
+
+// Redirigir a la página principal
+return Astro.redirect('/');
+---

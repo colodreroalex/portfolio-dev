@@ -1,0 +1,19 @@
+---
+const pathname = Astro.url.pathname;
+const currentLang = pathname.startsWith('/en') ? 'en' : 'es';
+---
+
+<div class="flex items-center ml-2">
+  <a
+    href="/"
+    class={`px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-sm ${currentLang === 'es' ? 'font-bold' : 'opacity-50'}`}
+  >
+    ES
+  </a>
+  <a
+    href="/en"
+    class={`px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-sm ml-1 ${currentLang === 'en' ? 'font-bold' : 'opacity-50'}`}
+  >
+    EN
+  </a>
+</div>
