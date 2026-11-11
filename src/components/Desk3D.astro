@@ -1,0 +1,63 @@
+---
+import { getTranslations } from "@/i18n/i18n";
+
+interface Props {
+  lang?: "es" | "en";
+  contactHref: string;
+}
+
+const { lang = "es", contactHref } = Astro.props;
+const t = getTranslations(lang);
+
+const items = {
+  projects: { label: t.header.projects, href: "#proyectos" },
+  experience: { label: t.header.experience, href: "#experiencia" },
+  skills: { label: t.header.skills, href: "#skills" },
+  aboutMe: { label: t.header.aboutMe, href: "#sobre-mi" },
+  contact: { label: t.header.contact, href: contactHref },
+};
+---
+
+<div
+  class="desk3d"
+  data-desk3d
+  data-items={JSON.stringify(items)}
+  data-hello={t.desk.hello}
+>
+  <canvas role="img" aria-label={t.desk.label}></canvas>
+  <span class="desk3d-tip" data-desk-tip hidden></span>
+  <p class="desk3d-hint" aria-hidden="true">{t.desk.hint}</p>
+</div>
+
+<script>
+  const boot = () => {
+    document.querySelectorAll<HTMLElement>("[data-desk3d]").forEach((el) => {
+      if (el.dataset.booted) return;
+      el.dataset.booted = "1";
+
+      const probe = document.createElement("canvas");
+      const hasWebGL = !!(probe.getContext("webgl2") || probe.getContext("webgl"));
+      if (!hasWebGL) {
+        el.classList.add("is-unavailable");
+        return;
+      }
+
+      const io = new IntersectionObserver(
+        async (entries) => {
+          if (!entries.some((e) => e.isIntersecting)) return;
+          io.disconnect();
+          try {
+            const { mountDesk } = await import("../scripts/desk3d.js");
+            await mountDesk(el);
+          } catch (err) {
+            console.error(err);
+            el.classList.add("is-unavailable");
+          }
+        },
+        { rootMargin: "200px" },
+      );
+      io.observe(el);
+    });
+  };
+  document.addEventListener("astro:page-load", boot);
+</script>

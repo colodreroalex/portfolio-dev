@@ -212,6 +212,11 @@
     "description": "Administrador de <strong>Salesforce en Accenture para Repsol</strong>, con foco en seguridad, soporte de entornos y validación de despliegues. Desarrollador de aplicaciones web y multiplataforma con experiencia en <strong>SAP ABAP</strong>.",
     "contactMe": "Contáctame"
   },
+  "desk": {
+    "label": "Escritorio 3D interactivo con el avatar de Alejandro. Los objetos enlazan a las secciones de la página.",
+    "hint": "Arrastra para girar · haz clic en los objetos",
+    "hello": "¡Hola! 👋"
+  },
   "sections": {
     "experience": "Carrera Profesional",
     "projects": "Proyectos",

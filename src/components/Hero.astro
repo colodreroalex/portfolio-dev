@@ -5,12 +5,14 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHub from "./icons/GitHub.astro";
+import Desk3D from "@/components/Desk3D.astro";
 import { getTranslations } from "@/i18n/i18n";
 
 const { lang = 'es' } = Astro.props;
 const t = getTranslations(lang);
 ---
 
+<div class="hero-layout">
 <div class="hero">
   <div class="hero-intro">
     <img
@@ -57,4 +59,6 @@ const t = getTranslations(lang);
       GitHub
     </SocialPill>
   </nav>
+</div>
+<Desk3D lang={lang} contactHref="mailto:damalexcolo@gmail.com" />
 </div>

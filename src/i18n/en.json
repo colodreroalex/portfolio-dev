@@ -212,6 +212,11 @@
     "description": "<strong>Salesforce administrator at Accenture supporting Repsol</strong>, focused on security, environment support and release validation. Web and cross-platform developer with experience in <strong>SAP ABAP</strong>.",
     "contactMe": "Contact Me"
   },
+  "desk": {
+    "label": "Interactive 3D desk with Alejandro's avatar. The objects link to the sections of the page.",
+    "hint": "Drag to rotate · click the objects",
+    "hello": "Hi there! 👋"
+  },
   "sections": {
     "experience": "Professional Career",
     "projects": "Projects",
